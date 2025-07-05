@@ -1,0 +1,1 @@
+document.getElementById('game').innerText = 'Welcome to HAL\'s Golf. Voice and multiplayer enabled version.';
