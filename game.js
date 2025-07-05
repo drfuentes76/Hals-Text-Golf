@@ -30,9 +30,9 @@ function loadHole() {
   const hole = holes[currentHole];
   remainingDistance = hole.distance;
   strokes = 0;
-  document.getElementById('holeInfo').innerText = 
+  document.getElementById('holeInfo').innerText =
     `Hole ${hole.number}: Par ${hole.par}, ${hole.distance} yards.`;
-  document.getElementById('terrainInfo').innerText = 
+  document.getElementById('terrainInfo').innerText =
     `Tee box. ${remainingDistance} yards to hole.`;
   speakText(`Hole ${hole.number}, Par ${hole.par}, ${hole.distance} yards.`);
 }
@@ -44,12 +44,15 @@ function takeShot() {
   remainingDistance -= distance;
   strokes++;
 
+  document.getElementById('swingSound').play();
+
   let terrain = "fairway";
   if (remainingDistance < 30 && club !== "Putter") terrain = "rough";
   if (remainingDistance < 10 && club === "Putter") terrain = "green";
   if (remainingDistance <= 0) {
     remainingDistance = 0;
-    document.getElementById('shotResult').innerText = 
+    document.getElementById('holeSound').play();
+    document.getElementById('shotResult').innerText =
       `Ball holed in ${strokes} strokes!`;
     speakText(`Ball in hole. ${strokes} strokes.`);
     currentHole++;

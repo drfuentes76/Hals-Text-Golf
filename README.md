@@ -1,11 +1,10 @@
 
-# HAL's Golf - Text-Based v2.1
+# HAL's Golf - Text-Based v3.0
 
-This update includes:
-- Hole layout narration
-- Shot progression and distance tracking
-- Terrain logic and feedback
-- Automatic hole advancement
-- Full text + voice narration
+Includes:
+- Full gameplay engine
+- Voice narration
+- Shot logic and terrain feedback
+- Native SNES-style music and sound effects
 
-Deploy this folder to GitHub Pages.
+Deploy on GitHub Pages to play in-browser.

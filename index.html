@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HAL's Golf - Text-Based v2.1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAL's Golf - Text-Based v3.0</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>HAL's Golf - Text-Based (v2.1)</h1>
+  <h1>HAL's Golf - Text-Based (v3.0)</h1>
+  <audio id="bgm" loop autoplay>
+    <source src="bgm.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="swingSound">
+    <source src="swing.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="holeSound">
+    <source src="hole.mp3" type="audio/mpeg" />
+  </audio>
   <div>
     <label for="playerName">Enter Player Name:</label>
     <input type="text" id="playerName" />
