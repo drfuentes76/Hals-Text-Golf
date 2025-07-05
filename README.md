@@ -1,10 +1,12 @@
-# HAL's Hole in One Golf - Text Version
 
-This is a fully accessible, text-based adaptation of HAL's Hole in One Golf. Includes:
-- Full 18-hole logic
-- Voice feedback
-- SNES-style sound effects
-- Multiplayer mode
-- Tournament leaderboard
+# HAL's Hole in One Golf - Text Version (v2.0)
 
-Deploy to GitHub Pages to play in browser.
+This is the complete version with:
+- 18-hole golf engine
+- Shot selection and hazards
+- Voice feedback (Web Speech API)
+- SNES-style sound effect support
+- Multiplayer and tournament logic
+- Live leaderboard ticker
+
+Deploy to GitHub Pages for web play.
