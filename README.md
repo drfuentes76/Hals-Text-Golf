@@ -1,12 +1,11 @@
 
-# HAL's Hole in One Golf - Text Version (v2.0)
+# HAL's Golf - Text-Based v2.1
 
-This is the complete version with:
-- 18-hole golf engine
-- Shot selection and hazards
-- Voice feedback (Web Speech API)
-- SNES-style sound effect support
-- Multiplayer and tournament logic
-- Live leaderboard ticker
+This update includes:
+- Hole layout narration
+- Shot progression and distance tracking
+- Terrain logic and feedback
+- Automatic hole advancement
+- Full text + voice narration
 
-Deploy to GitHub Pages for web play.
+Deploy this folder to GitHub Pages.
