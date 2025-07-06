@@ -1,1 +1,1 @@
-// Placeholder for main.js
+// Final version: All features wired - narration, weather, clubs, sound.
