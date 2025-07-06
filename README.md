@@ -1,11 +1,11 @@
 
-# HAL's Golf - Text-Based v4.0
+# HAL's Golf - Text-Based v4.1
 
-Version 4.0 includes:
-- Course selector
-- Dynamic weather (wind/rain)
-- Shot replay narration
-- Per-hole stat tracker
-- Endgame performance summary
+Fully functional version with:
+- Complete hole logic
+- Weather and wind effects
+- Sound effects and background music
+- Voice narration
+- Stat tracking and score summary
 
-Deploy to GitHub Pages for browser play.
+Ready for GitHub Pages deployment.

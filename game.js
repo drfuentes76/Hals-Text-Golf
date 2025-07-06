@@ -9,6 +9,8 @@ let currentHole = 0;
 let remainingDistance = 0;
 let strokes = 0;
 let playerName = '';
+let stats = [];
+let wind = 0;
 
 const clubDistances = {
   "Driver": 230,
@@ -23,27 +25,31 @@ const clubDistances = {
 function startGame() {
   playerName = document.getElementById('playerName').value || "Player";
   document.getElementById('gameUI').style.display = 'block';
+  stats = [];
+  currentHole = 0;
   loadHole();
 }
 
 function loadHole() {
   const hole = holes[currentHole];
+  wind = Math.floor(Math.random() * 21) - 10;
   remainingDistance = hole.distance;
   strokes = 0;
-  document.getElementById('holeInfo').innerText =
+  document.getElementById('holeInfo').innerText = 
     `Hole ${hole.number}: Par ${hole.par}, ${hole.distance} yards.`;
-  document.getElementById('terrainInfo').innerText =
-    `Tee box. ${remainingDistance} yards to hole.`;
-  speakText(`Hole ${hole.number}, Par ${hole.par}, ${hole.distance} yards.`);
+  document.getElementById('terrainInfo').innerText = 
+    `${remainingDistance} yards to hole.`;
+  document.getElementById('weatherInfo').innerText =
+    `Wind: ${wind} mph`;
+  speakText(`Hole ${hole.number}, Par ${hole.par}, ${hole.distance} yards. Wind: ${wind} miles per hour.`);
 }
 
 function takeShot() {
   const club = document.getElementById('clubSelect').value;
   const power = parseInt(document.getElementById('powerInput').value);
-  let distance = Math.floor(clubDistances[club] * (power / 100));
+  let distance = Math.floor(clubDistances[club] * (power / 100)) + wind;
   remainingDistance -= distance;
   strokes++;
-
   document.getElementById('swingSound').play();
 
   let terrain = "fairway";
@@ -52,15 +58,14 @@ function takeShot() {
   if (remainingDistance <= 0) {
     remainingDistance = 0;
     document.getElementById('holeSound').play();
-    document.getElementById('shotResult').innerText =
+    document.getElementById('shotResult').innerText = 
       `Ball holed in ${strokes} strokes!`;
-    speakText(`Ball in hole. ${strokes} strokes.`);
+    stats.push(strokes);
     currentHole++;
     if (currentHole < holes.length) {
-      setTimeout(loadHole, 2000);
+      setTimeout(loadHole, 2500);
     } else {
-      document.getElementById('holeInfo').innerText = "Game complete!";
-      speakText("Game complete!");
+      endGame();
     }
     return;
   }
@@ -70,6 +75,18 @@ function takeShot() {
   document.getElementById('terrainInfo').innerText = `${remainingDistance} yards to hole.`;
   speakText(result);
   updateTicker(`${playerName} - Hole ${holes[currentHole].number} - ${strokes} strokes`);
+}
+
+function endGame() {
+  let summary = "Game Over!\n";
+  let total = 0;
+  stats.forEach((s, i) => {
+    summary += `Hole ${i+1}: ${s} strokes\n`;
+    total += s;
+  });
+  summary += `Total Strokes: ${total}`;
+  document.getElementById('statsOutput').innerText = summary;
+  speakText("Game complete. Total strokes " + total);
 }
 
 function speakText(text) {
