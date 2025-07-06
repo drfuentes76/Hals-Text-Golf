@@ -1,10 +1,11 @@
 
-# HAL's Golf - Text-Based v3.0
+# HAL's Golf - Text-Based v4.0
 
-Includes:
-- Full gameplay engine
-- Voice narration
-- Shot logic and terrain feedback
-- Native SNES-style music and sound effects
+Version 4.0 includes:
+- Course selector
+- Dynamic weather (wind/rain)
+- Shot replay narration
+- Per-hole stat tracker
+- Endgame performance summary
 
-Deploy on GitHub Pages to play in-browser.
+Deploy to GitHub Pages for browser play.
