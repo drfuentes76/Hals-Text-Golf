@@ -1,1 +1,1 @@
-// Full game logic with 18 holes, wind, and audio wired.
+// Game logic would go here
