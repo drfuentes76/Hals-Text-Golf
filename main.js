@@ -1,1 +1,1 @@
-console.log('HAL Golf Loaded');
+// JavaScript game logic placeholder
