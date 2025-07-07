@@ -1,1 +1,2 @@
-// Full v4.5 logic: hazards, ball direction, on-green, narration
+// HAL's Golf v4.5 Finalized
+// Full logic for ball shaping, terrain bounce, hazards, putting, narration, and weather
