@@ -1,1 +1,1 @@
-// Final version: All features wired - narration, weather, clubs, sound.
+// Advanced logic: shot shaping, hazards, on-green play, full audio integration

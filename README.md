@@ -1,2 +1,2 @@
-# HAL's Golf - v4.4
-Final build: full game logic, narration, wind/weather, sound, and club set.
+# HAL's Golf - v4.5 Prep
+Includes prep for all advanced gameplay and full audio.
