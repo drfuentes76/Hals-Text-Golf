@@ -1,1 +1,1 @@
-// Advanced logic: shot shaping, hazards, on-green play, full audio integration
+// Full v4.5 logic: hazards, ball direction, on-green, narration
